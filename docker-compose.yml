@@ -9,13 +9,28 @@ services:
             - DB_NAME=${DB_NAME}
             - DB_HOST=${DB_HOST}
         working_dir: /var/www/html
+        
         volumes:
             - ./volumes/app1/:/var/www/html # Charger le code source
             - ./volumes/config/php/php.ini:/usr/local/etc/php/php.ini #php.ini
             - ./volumes/config/ssl/:/etc/ssl_cert #certificat ssl
         depends_on:
             - mariadb
-       
+
+    composer: 
+        image: composer
+        working_dir: /var/www/html
+        volumes: 
+            - ./volumes/app1/:/var/www/html
+        command: composer install
+    
+    composer2: 
+        image: composer
+        working_dir: /var/www/html
+        volumes: 
+            - ./volumes/app2/:/var/www/html
+        command: composer install
+
     app1:
         image: nginx:latest
         environment:
@@ -39,12 +54,12 @@ services:
             - DB_USER=${DB_USER}
             - DB_NAME=${DB_NAME}
             - DB_HOST=${DB_HOST}
-    
         working_dir: /var/www/html
         volumes:
             - ./volumes/app2/:/var/www/html # Charger le code source
             - ./volumes/config/php/php.ini:/usr/local/etc/php/php.ini #php.ini
             - ./volumes/config/ssl/:/etc/ssl_cert #certificat ssl
+
         depends_on:
             - mariadb
        

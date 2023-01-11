@@ -177,3 +177,5 @@
 172.22.0.1 - - [11/Jan/2023:11:32:03 +0000] "GET / HTTP/1.1" 200 18128 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0"
 172.22.0.1 - - [11/Jan/2023:11:32:13 +0000] "GET /register HTTP/1.1" 200 651 "http://localhost:81/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0"
 172.22.0.1 - - [11/Jan/2023:11:32:37 +0000] "POST /register HTTP/1.1" 200 19 "http://localhost:81/register" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0"
+172.22.0.1 - - [11/Jan/2023:15:32:04 +0000] "GET / HTTP/1.1" 200 18128 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+172.22.0.1 - - [11/Jan/2023:15:33:45 +0000] "GET /register HTTP/1.1" 200 651 "http://localhost:81/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
